@@ -4,10 +4,10 @@ import { fetchTrending } from 'services/api';
 import {
   List,
   Item,
-  Date,
   Title,
+  Footer,
   Counter,
-  Btn,
+  Link,
   Icon,
 } from './MovieList.styled';
 
@@ -19,6 +19,7 @@ export default function MovieList() {
       const response = await fetchTrending();
 
       const data = response.results;
+      console.log(data);
 
       setData(data);
     }
@@ -27,14 +28,18 @@ export default function MovieList() {
 
   return (
     <List>
-      {data.map(({ id, release_date, title, vote_average }) => {
+      {data.map(({ id, title, vote_average }) => {
         return (
           <Item key={id}>
-            <Date>{release_date}</Date>
             <Title>{title}</Title>
-            <Btn type="button">Next</Btn>
-            <Icon />
-            <Counter>{vote_average}</Counter>
+            <Footer>
+              <Link href="">Details</Link>
+
+              <Counter>
+                <Icon size="20" />
+                {vote_average}
+              </Counter>
+            </Footer>
           </Item>
         );
       })}

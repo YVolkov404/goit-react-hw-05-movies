@@ -1,0 +1,18 @@
+import styled from 'styled-components';
+
+export const Footer = styled.footer`
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  background-color: #2d3047;
+  box-shadow: 0px -2px 8px 0 rgba(0, 0, 0, 0.2),
+    0px -4px 20px 0 rgba(0, 0, 0, 0.19);
+`;
+
+export const Copyright = styled.span`
+  display: block;
+  padding: 10px 0;
+  font-size: 22px;
+  text-align: center;
+  color: #fffd82;
+`;

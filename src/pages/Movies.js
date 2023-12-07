@@ -1,11 +1,10 @@
-import MovieList from 'components/movie-list/MovieList';
-import { Layout, Title } from 'components/App.styled';
+import { Layout } from 'components/App.styled';
+import { SearchForm } from 'components/search-form/SearchForm';
 
 export default function Movies() {
   return (
     <Layout>
-      <Title>Trending today</Title>
-      <MovieList />
+      <SearchForm />
     </Layout>
   );
 }

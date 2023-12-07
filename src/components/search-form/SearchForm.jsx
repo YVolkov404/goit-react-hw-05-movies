@@ -1,11 +1,11 @@
 import { Formik } from 'formik';
-import { Form, Input, ErrorMsg, SubmitBtn } from './SearchForm.styled';
+import { Form, Input, ErrorMsg, SubmitBtn, Icon } from './SearchForm.styled';
 import * as Yup from 'yup';
 
 const ContactFormSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(3, 'Title too short!')
-    .max(27, 'Title too long!')
+  title: Yup.string()
+    .min(3, 'Query too short!')
+    .max(27, 'Query too long!')
     .required('Required'),
 });
 
@@ -26,9 +26,11 @@ export const SearchForm = props => {
           autoFocus
           placeholder="Search for your favorite movies and series"
         />
-        <ErrorMsg name="name" component="span" />
+        <ErrorMsg name="title" component="span" />
 
-        <SubmitBtn type="submit">Add contact</SubmitBtn>
+        <SubmitBtn type="submit">
+          <Icon size="42" />
+        </SubmitBtn>
       </Form>
     </Formik>
   );

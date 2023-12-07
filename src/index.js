@@ -8,6 +8,8 @@ import { ThemeProvider } from 'styled-components';
 const theme = {
   mainColor: '#f3ffe1',
   secondary: '#2d3047',
+  thirdColor: '#72bf80',
+  fourthColor: '#fffd82',
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(

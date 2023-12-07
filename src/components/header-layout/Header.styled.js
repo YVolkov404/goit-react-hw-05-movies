@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import { FcFilmReel } from 'react-icons/fc';
 
 export const Header = styled.header`
-  width: 100%;
+  position: fixed;
+  width: 100vw;
   background-color: #2d3047;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-top: 2px solid #e53a35;
-  border-bottom: 1px solid #1b998b;
   stroke-opacity: inherit;
   opacity: 90%;
   fill-opacity: 95%;

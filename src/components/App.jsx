@@ -10,11 +10,14 @@ import NotFound from 'pages/NotFound';
 
 //-----------------------------------------------------------------------
 import { Head } from './header-layout/Header';
+import { Foot } from './footer-layout/Footer';
+//-----------------------------------------------------------------------
+import { Wrapper } from './App.styled';
 //-----------------------------------------------------------------------
 export const App = () => {
   //---------------------------------------------------------------------
   return (
-    <div>
+    <Wrapper>
       <Head />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -25,6 +28,7 @@ export const App = () => {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </div>
+      <Foot />
+    </Wrapper>
   );
 };
