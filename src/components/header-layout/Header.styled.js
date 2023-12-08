@@ -9,8 +9,8 @@ export const Header = styled.header`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-top: 2px solid #e53a35;
   stroke-opacity: inherit;
-  opacity: 90%;
   fill-opacity: 95%;
+  z-index: 999;
 `;
 
 export const Nav = styled.nav`
@@ -52,18 +52,19 @@ export const Logo = styled.li`
   font-weight: 1000;
   font-size: 36px;
   letter-spacing: 1.25px;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover,
-  > a:hover .animate__pulse {
-    animation-iteration-count: infinite;
-    animation-delay: 250ms;
-    animation-timing-function: ease-in-out;
+  &:hover {
+    color: #72bf80;
+    transform: scale(1.03);
   }
 `;
 
 export const Link = styled(NavLink)`
   color: #fffd82;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   & span {
     display: inline-block;
@@ -71,9 +72,14 @@ export const Link = styled(NavLink)`
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  &:hover,
+  &:hover g,
   &.active {
     color: #72bf80;
+    fill: #72bf80;
+  }
+
+  &:hover path {
+    fill: #e53a35;
   }
 
   &:hover span,

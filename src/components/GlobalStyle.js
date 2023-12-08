@@ -39,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
 
     h1,
     h2,
+    h3,
     ul,
     p {
       margin: 0;
@@ -51,10 +52,6 @@ export const GlobalStyle = createGlobalStyle`
 
     a {
       text-decoration: none;
-    }
-
-    a:visited {
-      color: transparent;
     }
 
     img {

@@ -1,5 +1,13 @@
 import { BiSolidLike } from 'react-icons/bi';
 import styled from 'styled-components';
+import { Link as Ref } from 'react-router-dom';
+
+export const MovieListTitle = styled.h1`
+  text-align: center;
+  font-size: 54px;
+  font-weight: 1000;
+  color: #404456;
+`;
 
 export const List = styled.ul`
   display: flex;
@@ -17,11 +25,9 @@ export const Item = styled.li`
   width: calc((100% - 40px) / 3);
   height: 96px;
   padding: 7px 10px 10px 10px;
-  border: 3px solid #e64d45;
+  border: 2px solid #e64d45;
   font-variant: small-caps;
 
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -33,6 +39,7 @@ export const Item = styled.li`
   &:hover div > a {
     color: #e64d45;
   }
+  overflow: scroll;
 `;
 
 export const Title = styled.h2`
@@ -51,7 +58,7 @@ export const Counter = styled.span`
   font-size: 16px;
 `;
 
-export const Link = styled.a`
+export const Link = styled(Ref)`
   background-color: #f3ffe1;
   font-size: 18px;
   font-variant: all-small-caps;

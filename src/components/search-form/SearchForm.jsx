@@ -3,30 +3,30 @@ import { Form, Input, ErrorMsg, SubmitBtn, Icon } from './SearchForm.styled';
 import * as Yup from 'yup';
 
 const ContactFormSchema = Yup.object().shape({
-  title: Yup.string()
+  query: Yup.string()
     .min(3, 'Query too short!')
     .max(27, 'Query too long!')
     .required('Required'),
 });
 
-export const SearchForm = props => {
+export const SearchForm = ({ getQueryHandler }) => {
   return (
     <Formik
-      initialValues={{ title: '' }}
+      initialValues={{ query: '' }}
       validationSchema={ContactFormSchema}
       onSubmit={(values, actions) => {
-        props.onSubmit(values);
+        getQueryHandler(values);
         actions.resetForm();
       }}
     >
       <Form autoComplete="off">
         <Input
           type="text"
-          name="title"
+          name="query"
           autoFocus
           placeholder="Search for your favorite movies and series"
         />
-        <ErrorMsg name="title" component="span" />
+        <ErrorMsg name="query" component={'span'} />
 
         <SubmitBtn type="submit">
           <Icon size="42" />

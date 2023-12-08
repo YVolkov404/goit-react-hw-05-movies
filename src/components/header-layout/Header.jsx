@@ -13,14 +13,14 @@ export const Head = () => {
             </Link>
           </Item>
           <Item>
-            <Link to="/movies">
+            <Link to="/movie">
               <span>&gt;</span>
               Movies
             </Link>
           </Item>
-          <Logo className="animate__animated animate__pulse">
+          <Logo>
             <Link to="/">
-              <Icon size="36" className="animate__animated animate__pulse" />
+              <Icon size="36" />
               Movie&gt;hunter
             </Link>
           </Logo>

@@ -17,11 +17,10 @@ export const Input = styled.input`
   opacity: 0.75;
   caret-color: #e64d45;
   padding: 0 85px 0 15px;
-  border: 3px solid #72bf80;
-  border-radius: 7px;
+  border: 2px solid #72bf80;
+  /* border-radius: 7px; */
   overflow: hidden;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -33,6 +32,10 @@ export const Input = styled.input`
 
   &:focus-visible + button {
     opacity: 1;
+  }
+
+  &:focus-visible + button > svg {
+    filter: drop-shadow(1px 1px 1px rgb(76, 76, 109, 1));
   }
 `;
 
@@ -57,8 +60,8 @@ export const SubmitBtn = styled.button`
 
   border: transparent;
   /* border-left: 3px solid #fffd82; */
-  border-top-right-radius: 7px;
-  border-bottom-right-radius: 7px;
+  /* border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px; */
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -66,14 +69,11 @@ export const SubmitBtn = styled.button`
   &:hover {
     opacity: 1;
   }
-
-  &:hover svg {
-    filter: drop-shadow(1px 1px 1px rgb(76, 76, 109, 1));
-  }
 `;
 
 export const Icon = styled(RiSearch2Line)`
   color: #fffd82;
   vertical-align: bottom;
   transition: filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(3px 3px 3px rgb(76, 76, 109, 1));
 `;

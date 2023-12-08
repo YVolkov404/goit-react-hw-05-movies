@@ -1,31 +1,14 @@
-import { useEffect, useState } from 'react';
-import { fetchTrending } from 'services/api';
-
 import {
   List,
   Item,
   Title,
+  Link,
   Footer,
   Counter,
-  Link,
   Icon,
 } from './MovieList.styled';
 
-export default function MovieList() {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    async function getTrendingMovies() {
-      const response = await fetchTrending();
-
-      const data = response.results;
-      console.log(data);
-
-      setData(data);
-    }
-    getTrendingMovies();
-  }, [data]);
-
+export default function MovieList({ data }) {
   return (
     <List>
       {data.map(({ id, title, vote_average }) => {
@@ -33,7 +16,7 @@ export default function MovieList() {
           <Item key={id}>
             <Title>{title}</Title>
             <Footer>
-              <Link href="">Details</Link>
+              <Link to={`/movie/${id}`}>Details</Link>
 
               <Counter>
                 <Icon size="20" />

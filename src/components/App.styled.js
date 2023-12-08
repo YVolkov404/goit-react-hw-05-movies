@@ -14,9 +14,3 @@ export const Layout = styled.div`
   /* border-top: 4px solid #ff9b71; */
   padding: 110px 50px 70px 50px;
 `;
-
-export const Title = styled.h1`
-  text-align: center;
-  font-size: 54px;
-  color: #404456;
-`;
