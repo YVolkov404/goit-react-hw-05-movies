@@ -7,19 +7,20 @@ import { fetchReviews } from 'services/api';
 export default function Reviews() {
   const params = useParams();
 
-  console.log(params);
   const [reviewData, setReviewData] = useState([]);
 
   useEffect(() => {
     async function getMovieDetails() {
       try {
-        const credits = await fetchReviews(params.id);
+        const reviewData = await fetchReviews(params.id);
 
-        setReviewData(credits.cast);
+        setReviewData(reviewData.results);
       } catch (error) {}
     }
     getMovieDetails();
   }, [params.id, reviewData]);
+
+  console.log(reviewData);
 
   return <Overviews reviews={reviewData} />;
 }

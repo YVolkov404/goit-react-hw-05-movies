@@ -1,14 +1,14 @@
-import { ErrorMessage } from 'formik';
+import { Form as TagForm, Field, ErrorMessage } from 'formik';
 import { RiSearch2Line } from 'react-icons/ri';
 import styled from 'styled-components';
 
-export const Form = styled.form`
+export const Form = styled(TagForm)`
   position: relative;
   width: 700px;
   margin: 0 auto;
 `;
 
-export const Input = styled.input`
+export const Input = styled(Field)`
   width: 100%;
   height: 55px;
   font-size: 24px;
@@ -28,6 +28,7 @@ export const Input = styled.input`
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
     outline: none;
     opacity: 1;
+    /* filter: drop-shadow(1px 1px 1px rgb(76, 76, 109, 1)); */
   }
 
   &:focus-visible + button {
@@ -41,11 +42,9 @@ export const Input = styled.input`
 
 export const ErrorMsg = styled(ErrorMessage)`
   position: absolute;
-  display: inline-block;
   top: -20px;
-  right: 5px;
-  font-size: 16px;
-  color: #e64d45;
+  left: 15px;
+  color: #e53a35;
 `;
 
 export const SubmitBtn = styled.button`
@@ -66,8 +65,9 @@ export const SubmitBtn = styled.button`
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
+  &:hover > svg {
     opacity: 1;
+    filter: drop-shadow(1px 1px 1px rgb(76, 76, 109, 1));
   }
 `;
 

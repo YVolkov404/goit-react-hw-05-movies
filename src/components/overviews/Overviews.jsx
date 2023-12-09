@@ -1,33 +1,29 @@
 import { Layout } from 'components/App.styled';
-import {
-  List,
-  Item,
-  Image,
-  Name,
-  Rating,
-  Content,
-  Date,
-} from 'components/overviews/Overviews.styled'; /////////////////////////////}
+import { List, Item, Image, Name, Content, Wrapper } from './Overviews.styled';
 
-export default function Overviews() {
+const defaultImg =
+  'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=55x55';
+
+export default function Overviews({ reviews }) {
   return (
     <Layout>
       <List>
-        {cast.map(
-          ({ id, avatar_path, username, rating, content, created_at }) => {
+        {reviews.map(
+          ({ id, author_details: { avatar_path }, author, content }) => {
             return (
               <Item key={id}>
-                <Image
-                  src={`https://image.tmdb.org/t/p/w500${avatar_path}`}
-                  alt={'poster'}
-                />
-
-                <Name>{username}</Name>
-                <Rating>{rating}</Rating>
                 <Wrapper>
-                  <Content>{content}</Content>
-                  <Date>{created_at}</Date>
+                  <Image
+                    src={
+                      avatar_path
+                        ? [`https://image.tmdb.org/t/p/w500/${avatar_path}`]
+                        : defaultImg
+                    }
+                    alt="poster"
+                  />
+                  <Name>{author}</Name>
                 </Wrapper>
+                <Content>{content}</Content>
               </Item>
             );
           }

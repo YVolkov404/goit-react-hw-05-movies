@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import { NavLink as Ref } from 'react-router-dom';
+import { FaArrowRotateLeft } from 'react-icons/fa6';
+import { NavLink as Ref, Link } from 'react-router-dom';
 
 export const Wrap = styled.div`
+  position: inherit;
   width: 1110px;
   margin: 0 auto;
   display: flex;
@@ -9,6 +11,34 @@ export const Wrap = styled.div`
   flex-wrap: nowrap;
   gap: 50px;
   color: #2d3047;
+`;
+
+export const GoBackLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: fixed;
+  top: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 65px;
+  height: 65px;
+  border-radius: 60%;
+  background-color: #fffd82;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1000;
+
+  &:hover svg {
+    transform: rotate(-45deg);
+    font-weight: 1000;
+  }
+`;
+
+export const Icon = styled(FaArrowRotateLeft)`
+  fill: #72bf80;
+  transform: rotate(90deg);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 `;
 
 export const Wrapper = styled.div`

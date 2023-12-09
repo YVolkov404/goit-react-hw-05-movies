@@ -20,7 +20,7 @@ export default function MovieList({ data }) {
 
               <Counter>
                 <Icon size="20" />
-                {vote_average}
+                {Number(vote_average).toFixed(1)}
               </Counter>
             </Footer>
           </Item>

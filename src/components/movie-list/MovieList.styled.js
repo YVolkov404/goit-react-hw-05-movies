@@ -26,7 +26,7 @@ export const Item = styled.li`
   height: 96px;
   padding: 7px 10px 10px 10px;
   border: 2px solid #e64d45;
-  font-variant: small-caps;
+  /* font-variant: small-caps; */
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -61,6 +61,7 @@ export const Counter = styled.span`
 export const Link = styled(Ref)`
   background-color: #f3ffe1;
   font-size: 18px;
+  font-weight: 1000;
   font-variant: all-small-caps;
   vertical-align: top;
   cursor: pointer;

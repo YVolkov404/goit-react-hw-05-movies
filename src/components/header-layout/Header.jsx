@@ -20,7 +20,7 @@ export const Head = () => {
           </Item>
           <Logo>
             <Link to="/">
-              <Icon size="36" />
+              <Icon className="logo" size="36" />
               Movie&gt;hunter
             </Link>
           </Logo>
