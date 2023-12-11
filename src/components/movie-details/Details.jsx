@@ -32,7 +32,7 @@ export default function Details({ details }) {
   return (
     <Wrap>
       <GoBackLink to={location?.from ?? '/'}>
-        <Icon size="40" />
+        <Icon size="34" />
       </GoBackLink>
       <Wrapper>
         <Image

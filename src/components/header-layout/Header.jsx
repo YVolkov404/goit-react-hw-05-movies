@@ -1,5 +1,4 @@
 import { Header, Nav, List, Item, Logo, Link, Icon } from './Header.styled.js';
-import 'animate.css';
 
 export const Head = () => {
   return (

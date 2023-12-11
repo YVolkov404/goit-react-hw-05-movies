@@ -1,12 +1,19 @@
-import { Layout } from 'components/App.styled';
-import { List, Item, Image, Name, Content, Wrapper } from './Overviews.styled';
+import {
+  Wrap,
+  List,
+  Item,
+  Image,
+  Name,
+  Content,
+  Wrapper,
+} from './Overviews.styled';
 
 const defaultImg =
   'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=55x55';
 
 export default function Overviews({ reviews }) {
   return (
-    <Layout>
+    <Wrap>
       <List>
         {reviews.map(
           ({ id, author_details: { avatar_path }, author, content }) => {
@@ -29,6 +36,6 @@ export default function Overviews({ reviews }) {
           }
         )}
       </List>
-    </Layout>
+    </Wrap>
   );
 }

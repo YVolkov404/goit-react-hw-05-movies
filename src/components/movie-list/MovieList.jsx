@@ -17,7 +17,6 @@ export default function MovieList({ data }) {
             <Title>{title}</Title>
             <Footer>
               <Link to={`/movie/${id}`}>Details</Link>
-
               <Counter>
                 <Icon size="20" />
                 {Number(vote_average).toFixed(1)}

@@ -1,10 +1,11 @@
+import { useEffect, useState } from 'react';
+//------------------------------------------------------
+
 import MovieList from 'components/movie-list/MovieList';
 import { fetchTrending } from 'services/api';
 //------------------------------------------------------
-import { useEffect, useState } from 'react';
-//------------------------------------------------------
-import { Layout } from 'components/App.styled';
-import { MovieListTitle } from 'components/movie-list/MovieList.styled';
+
+import { Wrap, MovieListTitle } from 'components/movie-list/MovieList.styled';
 //------------------------------------------------------
 export default function Home() {
   const [data, setData] = useState([]);
@@ -21,9 +22,9 @@ export default function Home() {
   }, [data]);
 
   return (
-    <Layout>
+    <Wrap>
       <MovieListTitle>Trending today</MovieListTitle>
       <MovieList data={data} />
-    </Layout>
+    </Wrap>
   );
 }

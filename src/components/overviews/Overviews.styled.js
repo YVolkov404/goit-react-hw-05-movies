@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
+export const Wrap = styled.div`
+  width: inherit;
+  margin-top: 70px;
+`;
+
 export const List = styled.ul`
-  width: 1210px;
+  width: calc(100% - 194px);
   margin: 0 auto;
 `;
 

@@ -1,6 +1,5 @@
-import { Layout } from 'components/App.styled';
-//---------------------------------------------------------------
 import {
+  Wrap,
   List,
   Item,
   Image,
@@ -15,7 +14,7 @@ const defaultImg =
 
 export default function Credits({ cast }) {
   return (
-    <Layout>
+    <Wrap>
       <List>
         {cast.map(({ id, profile_path, name, character }) => {
           return (
@@ -37,6 +36,6 @@ export default function Credits({ cast }) {
           );
         })}
       </List>
-    </Layout>
+    </Wrap>
   );
 }

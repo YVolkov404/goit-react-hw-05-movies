@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 
+export const Wrap = styled.div`
+  width: 100%;
+  margin-top: 70px;
+`;
+
 export const List = styled.ul`
+  width: calc(100% - 154px);
+  margin: 0 auto;
   color: #2d3047;
   display: flex;
   flex-direction: row;
@@ -23,7 +30,7 @@ export const Item = styled.li`
 export const Image = styled.img`
   width: 100px;
   height: auto;
-  image-rendering: pixelated;
+  object-position: center;
 `;
 
 export const Wrapper = styled.div`

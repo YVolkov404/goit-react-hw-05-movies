@@ -2,6 +2,10 @@ import { BiSolidLike } from 'react-icons/bi';
 import styled from 'styled-components';
 import { Link as Ref } from 'react-router-dom';
 
+export const Wrap = styled.div`
+  width: auto;
+`;
+
 export const MovieListTitle = styled.h1`
   text-align: center;
   font-size: 54px;
@@ -10,6 +14,8 @@ export const MovieListTitle = styled.h1`
 `;
 
 export const List = styled.ul`
+  width: calc(100% - 154px);
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

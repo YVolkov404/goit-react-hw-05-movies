@@ -2,7 +2,7 @@ import { fetchDetails } from 'services/api';
 import { useEffect, useState } from 'react';
 import { Outlet, useParams } from 'react-router-dom';
 //---------------------------------------------------------------
-import { Layout } from 'components/App.styled';
+// import { Main } from 'components/app-layout/AppLayout.styled';
 import Details from 'components/movie-details/Details';
 
 //---------------------------------------------------------------
@@ -22,9 +22,9 @@ export default function MovieDetails() {
   }, [params.id, detailData]);
 
   return (
-    <Layout>
+    <>
       <Details details={detailData} />
       <Outlet />
-    </Layout>
+    </>
   );
 }

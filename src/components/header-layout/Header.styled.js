@@ -14,13 +14,14 @@ export const Header = styled.header`
 `;
 
 export const Nav = styled.nav`
-  max-width: 1280px;
-  min-width: 960px;
+  width: 1440px;
   margin: 0 auto;
-  padding: 15px 60px 20px 60px;
+  padding: 15px 0 20px 0;
 `;
 
 export const List = styled.ul`
+  width: calc(100% - 286px);
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;

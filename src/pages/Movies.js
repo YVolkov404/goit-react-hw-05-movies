@@ -7,7 +7,7 @@ import { fetchMovies } from 'services/api';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 //-------------------------------------------------------------
-import { Layout } from 'components/App.styled';
+// import { Main } from 'components/app-layout/AppLayout.styled';
 //-------------------------------------------------------------
 export default function Movies() {
   const [query, setSearchParams] = useSearchParams('');
@@ -29,9 +29,9 @@ export default function Movies() {
   }, [query, data]);
 
   return (
-    <Layout>
+    <>
       <SearchForm getQueryHandler={onSubmitForm} />
       {!(data.length === 0) && <MovieList data={data} />}
-    </Layout>
+    </>
   );
 }

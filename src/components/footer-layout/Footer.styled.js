@@ -10,6 +10,8 @@ export const Footer = styled.footer`
 `;
 
 export const Copyright = styled.span`
+  width: 1440px;
+  margin: 0 auto;
   display: block;
   padding: 10px 0;
   font-size: 22px;

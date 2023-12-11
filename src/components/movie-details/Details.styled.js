@@ -19,11 +19,11 @@ export const GoBackLink = styled(Link)`
   align-content: center;
   align-items: center;
   position: fixed;
-  top: 7%;
+  top: 95px;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 65px;
-  height: 65px;
+  width: 60px;
+  height: 60px;
   border-radius: 60%;
   background-color: #fffd82;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
