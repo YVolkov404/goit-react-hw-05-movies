@@ -45,7 +45,8 @@ export const Item = styled.li`
   &:hover div > a {
     color: #e64d45;
   }
-  overflow: scroll;
+
+  overflow: auto;
 `;
 
 export const Title = styled.h2`
