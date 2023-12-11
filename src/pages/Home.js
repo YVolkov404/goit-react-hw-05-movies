@@ -6,6 +6,7 @@ import { fetchTrending } from 'services/api';
 //------------------------------------------------------
 
 import { Wrap, MovieListTitle } from 'components/movie-list/MovieList.styled';
+
 //------------------------------------------------------
 export default function Home() {
   const [data, setData] = useState([]);

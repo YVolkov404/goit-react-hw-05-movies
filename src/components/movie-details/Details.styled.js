@@ -19,7 +19,7 @@ export const GoBackLink = styled(Link)`
   align-content: center;
   align-items: center;
   position: fixed;
-  top: 95px;
+  top: 90px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 60px;

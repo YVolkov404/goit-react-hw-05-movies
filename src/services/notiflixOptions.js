@@ -1,11 +1,11 @@
 export const notiflixSettings = {
   width: '530px',
-  position: 'center-top',
+  position: 'center-bottom',
   distance: '89px',
   opacity: 1,
   borderRadius: '0',
   rtl: false,
-  timeout: 4000,
+  timeout: 1500,
   messageMaxLength: 110,
   backOverlay: false,
   backOverlayColor: 'rgba(0,0,0,0.5)',
@@ -29,10 +29,10 @@ export const notiflixSettings = {
   fontAwesomeIconSize: '34px',
 
   info: {
-    background: '#ffe194',
-    textColor: '#4c4c6d',
+    background: '#2d3047',
+    textColor: '#fffd82',
     childClassName: 'notiflix-notify-info',
-    notiflixIconColor: '#4c4c6d',
+    notiflixIconColor: '#e53a35',
     fontAwesomeClassName: 'fas fa-info-circle',
     fontAwesomeIconColor: 'rgba(38,192,211,0.2)',
     backOverlayColor: 'rgba(38,192,211,0.2)',

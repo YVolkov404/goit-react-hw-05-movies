@@ -31,7 +31,7 @@ export const Item = styled.li`
   width: calc((100% - 40px) / 3);
   height: 96px;
   padding: 7px 10px 10px 10px;
-  border: 2px solid #e64d45;
+  border: 2px solid #e53a35;
   /* font-variant: small-caps; */
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -43,7 +43,7 @@ export const Item = styled.li`
   }
 
   &:hover div > a {
-    color: #e64d45;
+    color: #e53a35;
   }
 
   overflow: auto;
@@ -78,7 +78,7 @@ export const Link = styled(Ref)`
 `;
 
 export const Icon = styled(BiSolidLike)`
-  color: #e64d45;
+  color: #e53a35;
   vertical-align: bottom;
   margin-right: 4px;
 `;
