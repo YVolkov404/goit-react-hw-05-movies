@@ -24,7 +24,7 @@ export const Item = styled.li`
   border: 2px solid #72bf80;
   padding: 10px;
   gap: 10px;
-  overflow: scroll;
+  overflow: auto;
 `;
 
 export const Image = styled.img`
