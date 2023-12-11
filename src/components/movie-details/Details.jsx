@@ -14,26 +14,20 @@ import {
   ListItem,
   Span,
 } from 'components/movie-details/Details.styled';
+import { Loader } from 'services/Loader';
 
 const defaultImg =
   'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
 
-//--------------------------------------------------------------
-export default function Details({ details }) {
-  const {
-    poster_path,
-    title,
-    original_title,
-    vote_average,
-    overview,
-    genres,
-    location,
-  } = details;
+export default function Details({ details, location, loading }) {
+  const { poster_path, title, original_title, vote_average, overview, genres } =
+    details;
   return (
     <Wrap>
       <GoBackLink to={location?.from ?? '/'}>
         <Icon size="34" />
       </GoBackLink>
+      {loading && <Loader />}
       <Wrapper>
         <Image
           src={

@@ -1,16 +1,15 @@
-import Overviews from 'components/overviews/Overviews';
-//-------------------------------------------------------
+import { fetchReviews } from 'services/api';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { fetchReviews } from 'services/api';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { notiflixSettings } from 'services/notiflixOptions';
 //-------------------------------------------------------
-import { Message } from 'components/overviews/Overviews.styled';
+import Overviews from 'components/overviews/Overviews';
 //-------------------------------------------------------
+import { Message } from 'components/app-layout/AppLayout.styled';
+//-------------------------------------------------------
+const message = 'There are no reviews available';
+
 export default function Reviews() {
   const params = useParams();
-
   const [reviewData, setReviewData] = useState([]);
 
   useEffect(() => {
@@ -18,25 +17,21 @@ export default function Reviews() {
       try {
         const reviewData = await fetchReviews(params.id);
 
-        if (reviewData === 0) {
-          throw new Error();
-        }
-
         setReviewData(reviewData.results);
-      } catch (error) {
-        Notify.info('Sorry! There are no reviews available', notiflixSettings);
-      }
+
+        if (reviewData.length === 0) {
+          return message;
+        }
+      } catch (error) {}
     }
+
     getMovieDetails();
   }, [params.id, reviewData]);
 
   return (
     <>
-      {reviewData.length > 0 ? (
-        <Overviews reviews={reviewData} />
-      ) : (
-        <Message>There are no reviews available</Message>
-      )}
+      <Overviews reviews={reviewData} />
+      {reviewData.length === 0 && <Message>{message}</Message>}
     </>
   );
 }

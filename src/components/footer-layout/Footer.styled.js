@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Footer = styled.footer`
   position: fixed;
-  width: 100vw;
+  width: 100%;
   bottom: 0;
   background-color: #2d3047;
   box-shadow: 0px -2px 8px 0 rgba(0, 0, 0, 0.2),

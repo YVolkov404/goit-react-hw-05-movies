@@ -43,12 +43,4 @@ export const Content = styled.p`
   line-height: 1.32;
 `;
 
-export const Message = styled.p`
-  font-size: 32px;
-  text-align: center;
-  margin-top: 70px;
-  color: #72bf80;
-  text-decoration-line: line-through;
-  text-decoration-thickness: 4px;
-  text-decoration-color: #e53a35;
-`;
+

@@ -10,7 +10,7 @@ export const options = {
   },
 };
 
-export const fetchTrending = async query => {
+export const fetchTrending = async () => {
   const response = await axios(`/trending/movie/week`, options);
 
   return response.data.results;

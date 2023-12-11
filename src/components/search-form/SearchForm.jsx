@@ -1,6 +1,7 @@
 import { Formik } from 'formik';
-import { Form, Input, ErrorMsg, SubmitBtn, Icon } from './SearchForm.styled';
 import * as Yup from 'yup';
+//--------------------------------------------------------------------------
+import { Form, Input, ErrorMsg, SubmitBtn, Icon } from './SearchForm.styled';
 
 const searchSchema = Yup.object().shape({
   query: Yup.string().required('Required'),

@@ -8,7 +8,7 @@ import {
   Icon,
 } from './MovieList.styled';
 
-export default function MovieList({ data }) {
+export default function MovieList({ data, location }) {
   return (
     <List>
       {data.map(({ id, title, vote_average }) => {
@@ -16,7 +16,9 @@ export default function MovieList({ data }) {
           <Item key={id}>
             <Title>{title}</Title>
             <Footer>
-              <Link to={`/movie/${id}`}>Details</Link>
+              <Link to={`/movie/${id}`} state={{ from: location }}>
+                Details
+              </Link>
               <Counter>
                 <Icon size="20" />
                 {Number(vote_average).toFixed(1)}

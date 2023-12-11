@@ -18,7 +18,7 @@ export const GoBackLink = styled(Link)`
   justify-content: center;
   align-content: center;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 90px;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -39,6 +39,7 @@ export const Icon = styled(FaArrowRotateLeft)`
   fill: #72bf80;
   transform: rotate(90deg);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 99999;
 `;
 
 export const Wrapper = styled.div`
