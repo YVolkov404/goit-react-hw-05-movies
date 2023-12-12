@@ -16,8 +16,8 @@ export const Message = styled.div`
   font-size: 32px;
   text-align: center;
   margin-top: 70px;
-  color: #72bf80;
+  color: ${p => p.theme.thirdColor};
   text-decoration-line: line-through;
   text-decoration-thickness: 4px;
-  text-decoration-color: #e53a35;
+  text-decoration-color: ${p => p.theme.fifthColor};
 `;

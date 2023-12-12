@@ -12,7 +12,7 @@ export const Loader = () => {
         top: '-30px',
         right: '50%',
         transform: 'translate(50%, 50%)',
-        zIndex: '999999',
+        zIndex: '99999',
       }}
       wrapperClass="blocks-wrapper"
       colors={['#72bf80', '#e53a35', '#fffd82', '#e53a35', '#72bf80']}

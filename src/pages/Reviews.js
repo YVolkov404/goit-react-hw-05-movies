@@ -24,7 +24,6 @@ export default function Reviews() {
         }
       } catch (error) {}
     }
-
     getMovieDetails();
   }, [params.id, reviewData]);
 

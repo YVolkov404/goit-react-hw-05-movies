@@ -42,7 +42,7 @@ export default function Movies() {
 
   return (
     <>
-      <SearchForm location={location} getQueryHandler={onSubmitForm} />
+      <SearchForm getQueryHandler={onSubmitForm} />
       <MovieList location={location} data={data} />
       {data.length === 0 && <Message>{message}</Message>}
       {loading && <Loader />}

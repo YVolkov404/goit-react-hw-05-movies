@@ -10,7 +10,7 @@ export const Wrap = styled.div`
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 50px;
-  color: #2d3047;
+  color: ${p => p.theme.secondColor};
 `;
 
 export const GoBackLink = styled(Link)`
@@ -25,7 +25,7 @@ export const GoBackLink = styled(Link)`
   width: 60px;
   height: 60px;
   border-radius: 60%;
-  background-color: #fffd82;
+  background-color: ${p => p.theme.fourthColor};
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 1000;
 
@@ -36,7 +36,7 @@ export const GoBackLink = styled(Link)`
 `;
 
 export const Icon = styled(FaArrowRotateLeft)`
-  fill: #72bf80;
+  fill: ${p => p.theme.thirdColor};
   transform: rotate(90deg);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 99999;
@@ -49,18 +49,18 @@ export const Wrapper = styled.div`
 
 export const Image = styled.img`
   width: 375px;
-  border: 1px solid #e53a35;
+  border: 1px solid ${p => p.theme.fifthColor};
   padding: 10px;
   margin-bottom: 20px;
 `;
 
 export const NavLink = styled(Ref)`
   font-size: 26px;
-  border: 2px solid #72bf80;
+  border: 2px solid ${p => p.theme.thirdColor};
   padding: 8px 0;
   margin-bottom: 10px;
   text-align: center;
-  color: #2d3047;
+  color: ${p => p.theme.secondColor};
   cursor: pointer;
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -72,20 +72,20 @@ export const NavLink = styled(Ref)`
 
   &:hover,
   &:focus {
-    border-color: #e53a35;
-    color: #72bf80;
+    border-color: ${p => p.theme.fifthColor};
+    color: ${p => p.theme.thirdColor};
   }
 `;
 
 export const Title = styled.h1`
   font-size: 42px;
   font-weight: 1000;
-  color: #2d3047;
+  color: ${p => p.theme.secondColor};
   margin-top: 15px;
   text-shadow: 0px 0px 0px 5px rgba(255, 253, 130, 1);
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-decoration-color: #e53a35;
+  text-decoration-color: ${p => p.theme.fifthColor};
   text-decoration-thickness: 6px;
   text-underline-offset: 6px;
 `;
@@ -93,7 +93,7 @@ export const Title = styled.h1`
 export const Score = styled.p`
   font-size: 18px;
   font-variant-caps: all-small-caps;
-  color: #2d3047;
+  color: ${p => p.theme.secondColor};
   margin-top: 15px;
   text-align: right;
   margin-right: 30px;
@@ -115,7 +115,7 @@ export const ListTitle = styled.h3`
   margin-top: 15px;
   font-size: 26px;
   font-weight: 1000;
-  color: #e53a35;
+  color: ${p => p.theme.fifthColor};
   text-shadow: 0px 0px 0px 5px rgba(255, 253, 130, 1);
 `;
 
@@ -132,7 +132,7 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   font-size: 20px;
   text-transform: lowercase;
-  color: #72bf80;
+  color: ${p => p.theme.thirdColor};
 `;
 
 export const Span = styled.span`

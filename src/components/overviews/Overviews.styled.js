@@ -11,20 +11,20 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  color: #2d3047;
+  color: ${p => p.theme.secondColor};
 `;
 
 export const Image = styled.img`
   width: 55px;
   height: 55px;
   object-fit: cover;
-  border: 1px solid #72bf80;
+  border: 1px solid ${p => p.theme.thirdColor};
   padding: 3px;
 `;
 
 export const Name = styled.p`
   font-size: 30px;
-  color: #e53a35;
+  color: ${p => p.theme.fifthColor};
 `;
 
 export const Wrapper = styled.div`
@@ -37,10 +37,8 @@ export const Wrapper = styled.div`
 
 export const Content = styled.p`
   font-size: 22px;
-  border: 1px solid #e53a35;
+  border: 1px solid ${p => p.theme.fifthColor};
   padding: 25px 15px;
   margin-bottom: 50px;
   line-height: 1.32;
 `;
-
-

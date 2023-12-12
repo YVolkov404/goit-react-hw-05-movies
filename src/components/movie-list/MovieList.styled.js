@@ -21,7 +21,7 @@ export const List = styled.ul`
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 30px;
-  color: #404456;
+  color: ${p => p.theme.secondColor};
 `;
 
 export const Item = styled.li`
@@ -31,7 +31,7 @@ export const Item = styled.li`
   width: calc((100% - 40px) / 3);
   height: 96px;
   padding: 7px 10px 10px 10px;
-  border: 2px solid #e53a35;
+  border: 2px solid ${p => p.theme.fifthColor};
   /* font-variant: small-caps; */
 
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -43,7 +43,7 @@ export const Item = styled.li`
   }
 
   &:hover div > a {
-    color: #e53a35;
+    color: ${p => p.theme.fifthColor};
   }
 
   overflow: auto;
@@ -66,19 +66,19 @@ export const Counter = styled.span`
 `;
 
 export const Link = styled(Ref)`
-  background-color: #f3ffe1;
+  background-color: ${p => p.theme.firstColor};
   font-size: 18px;
   font-weight: 1000;
   font-variant: all-small-caps;
   vertical-align: top;
   cursor: pointer;
-  color: #7ec589;
+  color: ${p => p.theme.thirdColor};
   text-decoration-line: underline;
   text-decoration-thickness: 2px;
 `;
 
 export const Icon = styled(BiSolidLike)`
-  color: #e53a35;
+  color: ${p => p.theme.fifthColor};
   vertical-align: bottom;
   margin-right: 4px;
 `;

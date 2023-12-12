@@ -6,8 +6,8 @@ import { GlobalStyle } from 'components/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
-  mainColor: '#f3ffe1',
-  secondary: '#2d3047',
+  firstColor: '#f3ffe1',
+  secondColor: '#2d3047',
   thirdColor: '#72bf80',
   fourthColor: '#fffd82',
   fifthColor: '#e53a35',

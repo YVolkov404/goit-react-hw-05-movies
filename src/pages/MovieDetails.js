@@ -17,6 +17,7 @@ export default function MovieDetails() {
     async function getMovieDetails() {
       try {
         const details = await fetchDetails(params.id);
+
         isLoading(true);
         setDetailData(details);
       } catch (error) {
