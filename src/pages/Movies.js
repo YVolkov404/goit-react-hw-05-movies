@@ -18,6 +18,7 @@ export default function Movies() {
   const [loading, isLoading] = useState(false);
 
   useEffect(() => {
+    if (!query.get('query')) return;
     async function getSearchedMovies() {
       try {
         isLoading(true);
