@@ -18,14 +18,10 @@ export default function Cast() {
         const credits = await fetchCredits(params.id);
 
         setCreditData(credits.cast);
-
-        if (credits.cast === 0) {
-          return message;
-        }
       } catch (error) {}
     }
     getMovieDetails();
-  }, [params.id, creditData]);
+  }, [params.id]);
 
   return (
     <>

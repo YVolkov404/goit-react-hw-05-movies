@@ -18,10 +18,6 @@ export default function Reviews() {
         const reviewData = await fetchReviews(params.id);
 
         setReviewData(reviewData.results);
-
-        if (reviewData.length === 0) {
-          return message;
-        }
       } catch (error) {}
     }
     getMovieDetails();

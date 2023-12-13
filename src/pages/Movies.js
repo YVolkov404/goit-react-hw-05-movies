@@ -17,28 +17,26 @@ export default function Movies() {
   const [data, setData] = useState([]);
   const [loading, isLoading] = useState(false);
 
+  useEffect(() => {
+    async function getSearchedMovies() {
+      try {
+        isLoading(true);
+
+        const data = await fetchMovies(query);
+        setData(data);
+      } catch (error) {
+      } finally {
+        isLoading(false);
+      }
+    }
+
+    getSearchedMovies();
+  }, [query]);
+
   const onSubmitForm = query => {
     setSearchParams(query);
+    console.log(query);
   };
-
-  useEffect(() => {
-    try {
-      async function getSearchedMovies() {
-        isLoading(true);
-        const data = await fetchMovies(query);
-
-        setData(data);
-
-        if (data.length === 0) {
-          return message;
-        }
-      }
-      getSearchedMovies();
-    } catch (error) {
-    } finally {
-      isLoading(loading);
-    }
-  }, [query, data, loading]);
 
   return (
     <>

@@ -16,17 +16,17 @@ export default function MovieDetails() {
   useEffect(() => {
     async function getMovieDetails() {
       try {
+        isLoading(true);
         const details = await fetchDetails(params.id);
 
-        isLoading(true);
         setDetailData(details);
       } catch (error) {
       } finally {
-        isLoading(loading);
+        isLoading(false);
       }
     }
     getMovieDetails();
-  }, [params.id, detailData, loading]);
+  }, [params.id]);
 
   return (
     <>

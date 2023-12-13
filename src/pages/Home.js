@@ -14,19 +14,19 @@ export default function Home() {
   const [loading, isLoading] = useState(false);
 
   useEffect(() => {
-    try {
-      async function getTrendingMovies() {
+    async function getTrendingMovies() {
+      try {
         isLoading(true);
         const data = await fetchTrending();
 
         setData(data);
+      } catch (error) {
+      } finally {
+        isLoading(false);
       }
-      getTrendingMovies();
-    } catch (error) {
-    } finally {
-      isLoading(loading);
     }
-  }, [data, loading]);
+    getTrendingMovies();
+  }, []);
 
   return (
     <Wrap>

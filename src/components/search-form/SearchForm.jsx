@@ -10,7 +10,7 @@ const searchSchema = Yup.object().shape({
 export const SearchForm = ({ getQueryHandler }) => {
   return (
     <Formik
-      initialValues={{ query: '' }}
+      initialValues={{ query: null }}
       validationSchema={searchSchema}
       onSubmit={(values, actions) => {
         getQueryHandler(values);
